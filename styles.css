@@ -1,0 +1,77 @@
+:root {
+  --primary: #6c5ce7;
+  --dark: #0b0f19;
+  --muted: #6b7280;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  color: #1f2937;
+  background-color: #ffffff;
+}
+
+/* Utility: medium font weight to complement Bootstrap */
+.fw-medium { font-weight: 500 !important; }
+
+.bg-dark-70 {
+  background-color: rgba(11, 15, 25, 0.7) !important;
+  backdrop-filter: saturate(150%) blur(6px);
+}
+
+.navbar .nav-link {
+  color: #e5e7eb;
+}
+.navbar .nav-link.active, .navbar .nav-link:hover {
+  color: #ffffff;
+}
+
+.hero-section {
+  position: relative;
+  min-height: 90vh;
+  background-image: url('../../collage.webp');
+  background-size: cover;
+  background-position: center;
+}
+.hero-section .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(11,15,25,0.6) 0%, rgba(11,15,25,0.6) 100%);
+}
+
+/* Hero subtitle responsive sizing */
+.hero-subtitle {
+  letter-spacing: .04em;
+  line-height: 1.35;
+}
+@media (min-width: 576px) { .hero-subtitle { font-size: 1.5rem; } }
+@media (min-width: 768px) { .hero-subtitle { font-size: 1.75rem; } }
+@media (min-width: 992px) { .hero-subtitle { font-size: 2rem; } }
+
+.stat-card {
+  background: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.program-card img { height: 180px; object-fit: cover; }
+.program-card { border: none; border-radius: 1rem; overflow: hidden; }
+
+.sponsors-grid img { transition: transform .2s ease, opacity .2s ease; }
+.sponsors-grid img:hover { transform: translateY(-3px); opacity: .95; }
+
+footer { background: #f9fafb; }
+
+/* Smooth scroll offset for fixed navbar */
+section[id] { scroll-margin-top: 90px; }
+
+@media (max-width: 575.98px) {
+  .hero-section { min-height: 70vh; }
+}
+
+/* Hero organized-by block sizing */
+.hero-org { font-size: 1rem; }
+@media (min-width: 576px) { .hero-org { font-size: 1.0625rem; } }
+@media (min-width: 768px) { .hero-org { font-size: 1.125rem; } }
+@media (min-width: 992px) { .hero-org { font-size: 1.25rem; } }
+
+
